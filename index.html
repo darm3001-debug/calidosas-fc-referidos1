@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaña de Referidos | Club Deportivo Calidosas F.C.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons CDN -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0A162B',
+                            navyLight: '#11224D',
+                            navyCard: '#162A52',
+                            cyan: '#00C2FF',
+                            cyanHover: '#0099CC',
+                            gold: '#F59E0B',
+                            goldHover: '#D97706',
+                            orange: '#FF6B00',
+                            magenta: '#EC4899',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Teko', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-cyan {
+            box-shadow: 0 0 25px rgba(0, 194, 255, 0.25);
+        }
+        .glow-orange {
+            box-shadow: 0 0 25px rgba(255, 107, 0, 0.3);
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(0, 194, 255, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-brand-navy text-white font-sans antialiased bg-grid-pattern selection:bg-brand-cyan selection:text-brand-navy min-h-screen flex flex-col justify-between">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-40 bg-brand-navy/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="image.jpeg" alt="Club Deportivo Calidosas F.C." class="h-12 w-12 object-contain drop-shadow-[0_0_10px_rgba(0,194,255,0.5)] rounded-full border border-brand-cyan/30">
+                <div>
+                    <span class="font-display text-2xl font-bold tracking-wider text-white block leading-none">CALIDOSAS <span class="text-brand-cyan">F.C.</span></span>
+                    <span class="text-[10px] tracking-widest text-gray-400 uppercase font-semibold">Club Deportivo</span>
+                </div>
+            </div>
+            
+            <a href="#formulario" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-orange to-brand-gold text-brand-navy font-bold px-5 py-2.5 rounded-full hover:brightness-110 transition shadow-lg shadow-brand-orange/20 text-sm">
+                <i class="ph-bold ph-ticket text-lg"></i>
+                <span>Registrar Referidas</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                        <i class="ph-bold ph-sparkle"></i> Campaña Exclusiva de Referidos
+                    </div>
+                    
+                    <h1 class="font-display text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-none">
+                        PASA EL BALÓN Y <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-gold to-brand-orange">ENTRENA GRATIS</span>
+                    </h1>
+                    
+                    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Invita a tus amigas a formar parte de <strong class="text-white">Calidosas F.C.</strong> Trae hasta 3 amigas durante el primer mes y obtén hasta el <strong class="text-brand-gold">100% DE DESCUENTO</strong> en tu mensualidad. ¡Tu jugada paga fuera de la cancha!
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#simulador" class="w-full sm:w-auto text-center bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-extrabold px-8 py-4 rounded-xl transition shadow-lg glow-cyan text-base flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-calculator text-xl"></i>
+                            <span>Calcular Mi Descuento</span>
+                        </a>
+                        <a href="#formulario" class="w-full sm:w-auto text-center bg-brand-navyCard hover:bg-white/10 text-white border border-white/20 font-bold px-8 py-4 rounded-xl transition text-base flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-user-plus text-xl"></i>
+                            <span>Inscribir Amigas</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-cyan/20 via-brand-orange/20 to-brand-magenta/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+                    
+                    <div class="relative bg-brand-navyLight border border-white/10 p-6 rounded-3xl shadow-2xl text-center max-w-sm w-full glow-cyan">
+                        <div class="relative inline-block mb-4">
+                            <img src="image.jpeg" alt="Escudo Calidosas F.C." class="w-48 h-48 sm:w-56 sm:h-56 object-contain mx-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
+                        </div>
+                        <h3 class="font-display text-3xl font-bold text-white tracking-wide">CLUB DEPORTIVO</h3>
+                        <p class="text-brand-gold font-bold text-lg -mt-1">CALIDOSAS F.C.</p>
+                        
+                        <div class="mt-4 pt-4 border-t border-white/10 flex justify-around text-center">
+                            <div>
+                                <span class="block font-display text-2xl text-brand-cyan font-bold">$159.000</span>
+                                <span class="text-[11px] text-gray-400">Tarifa Normal</span>
+                            </div>
+                            <div class="h-8 w-px bg-white/10"></div>
+                            <div>
+                                <span class="block font-display text-2xl text-brand-gold font-bold">$0</span>
+                                <span class="text-[11px] text-gray-400">Con 3 Referidas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMULADOR DINÁMICO -->
+    <section id="simulador" class="py-16 bg-brand-navyLight/50 border-y border-white/5 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center space-y-3 mb-10">
+                <span class="text-brand-cyan font-bold text-sm tracking-wider uppercase">Herramienta Interactiva</span>
+                <h2 class="font-display text-4xl sm:text-5xl font-bold">CALCULA TU BENEFICIO</h2>
+                <p class="text-gray-300 text-sm sm:text-base">Mueve el selector según la cantidad de amigas que se inscribirán contigo:</p>
+            </div>
+
+            <!-- CONTENEDOR SIMULADOR -->
+            <div class="bg-brand-navyCard border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8">
+                
+                <!-- SELECTOR DE PERFIL -->
+                <div class="flex justify-center">
+                    <div class="bg-brand-navy p-1.5 rounded-xl border border-white/10 inline-flex gap-2">
+                        <button id="btnPerfilActual" onclick="setPerfil('actual')" class="px-5 py-2.5 rounded-lg font-bold text-sm transition bg-brand-cyan text-brand-navy shadow">
+                            Soy Jugadora Actual
+                        </button>
+                        <button id="btnPerfilNueva" onclick="setPerfil('nueva')" class="px-5 py-2.5 rounded-lg font-bold text-sm transition text-gray-400 hover:text-white">
+                            Soy Jugadora Nueva
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SLIDER -->
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <label for="rangeAmigas" class="font-bold text-gray-200">Amigas Referidas e Inscritas:</label>
+                        <span id="labelAmigas" class="font-display text-3xl font-bold text-brand-gold">0 Amigas</span>
+                    </div>
+                    <input type="range" id="rangeAmigas" min="0" max="3" value="0" step="1" oninput="actualizarSimulador()"
+                        class="w-full h-3 bg-brand-navy rounded-lg appearance-none cursor-pointer accent-brand-cyan">
+                    <div class="flex justify-between text-xs text-gray-400 px-1 font-semibold">
+                        <span>0 Amigas</span>
+                        <span>1 Amiga</span>
+                        <span>2 Amigas</span>
+                        <span>3+ Amigas</span>
+                    </div>
+                </div>
+
+                <!-- TARJETA DE RESULTADO -->
+                <div class="bg-brand-navy/80 border border-brand-cyan/20 rounded-2xl p-6 grid sm:grid-cols-2 gap-6 items-center">
+                    <div>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider block font-semibold">Tu Mensualidad el Primer Mes:</span>
+                        <div class="flex items-baseline gap-3 mt-1">
+                            <span id="precioFinal" class="font-display text-5xl sm:text-6xl font-bold text-white">$159.000</span>
+                            <span id="precioTachado" class="text-gray-500 line-through font-bold text-lg hidden">$159.000</span>
+                        </div>
+                        <p id="mensajeAhorro" class="text-xs text-brand-gold font-semibold mt-1">Tarifa regular del mes.</p>
+                    </div>
+
+                    <div class="bg-brand-navyLight border border-white/10 p-4 rounded-xl text-center space-y-1">
+                        <i id="iconoLogro" class="ph-fill ph-user-circle text-4xl text-gray-400"></i>
+                        <h4 id="tituloLogro" class="font-bold text-sm text-white">Tarifa Base</h4>
+                        <p id="descLogro" class="text-xs text-gray-300">Refiere a tu primera amiga para activar tu descuento.</p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#formulario" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-orange to-brand-gold text-brand-navy font-bold px-8 py-3.5 rounded-xl hover:brightness-110 transition shadow-lg text-sm">
+                        <i class="ph-bold ph-check-circle text-lg"></i>
+                        <span>¡Quiero registrar mis amigas ahora!</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE REGISTRO DE REFERIDAS -->
+    <section id="formulario" class="py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="bg-brand-navyCard border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-cyan/10 rounded-full blur-2xl"></div>
+
+                <div class="text-center space-y-2 mb-8">
+                    <span class="text-brand-orange font-bold text-xs tracking-widest uppercase">Registro Rápido</span>
+                    <h2 class="font-display text-4xl font-bold text-white">INSCRIBE A TUS AMIGAS</h2>
+                    <p class="text-gray-300 text-sm">Completa el formulario para registrar tus datos y la base de datos oficial se actualizará automáticamente.</p>
+                </div>
+
+                <form id="referralForm" onsubmit="procesarRegistro(event)" class="space-y-6">
+                    
+                    <!-- DATO JUGADORA PRINCIPAL -->
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Tu Nombre Completo *</label>
+                            <input type="text" id="nombreJugadora" required placeholder="Ej: Valentina Gómez" 
+                                class="w-full bg-brand-navy border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-cyan transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Tu Teléfono WhatsApp *</label>
+                            <input type="tel" id="telefonoJugadora" required placeholder="Ej: 3110000000" 
+                                class="w-full bg-brand-navy border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-cyan transition">
+                        </div>
+                    </div>
+
+                    <!-- CANTIDAD DE AMIGAS -->
+                    <div>
+                        <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">¿Cuántas amigas vas a referir? *</label>
+                        <select id="numAmigasSelect" onchange="renderCamposAmigas()" class="w-full bg-brand-navy border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-cyan transition">
+                            <option value="1">1 Amiga (Pagas $100.000)</option>
+                            <option value="2">2 Amigas (Pagas $50.000)</option>
+                            <option value="3">3 Amigas (¡Pagas $0 - GRATIS!)</option>
+                        </select>
+                    </div>
+
+                    <!-- CAMPOS DINÁMICOS DE LAS AMIGAS -->
+                    <div id="contenedorAmigas" class="space-y-4 pt-2">
+                        <!-- Generado por JS -->
+                    </div>
+
+                    <!-- MENSAJE ESTADO BASE DE DATOS -->
+                    <div id="statusMessage" class="hidden p-4 rounded-xl text-center text-xs font-bold"></div>
+
+                    <!-- BOTÓN DE ENVÍO -->
+                    <button type="submit" id="btnSubmit" class="w-full bg-gradient-to-r from-brand-orange via-brand-gold to-brand-cyan text-brand-navy font-extrabold py-4 rounded-xl shadow-lg hover:brightness-110 transition text-base flex items-center justify-center gap-2">
+                        <i class="ph-bold ph-paper-plane-tilt text-xl"></i>
+                        <span>REGISTRAR REFERIDAS Y NOTIFICAR POR WHATSAPP</span>
+                    </button>
+
+                    <p class="text-[11px] text-gray-400 text-center">
+                        * Tus datos serán guardados en el sistema de Calidosas F.C. El descuento se hace efectivo una vez tus amigas completen su pago.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÉRMINOS Y CONDICIONES -->
+    <section class="py-12 bg-brand-navyLight/30 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <details class="group bg-brand-navyCard/60 border border-white/10 rounded-2xl overflow-hidden transition">
+                <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-sm sm:text-base text-gray-200 hover:text-white">
+                    <span class="flex items-center gap-2">
+                        <i class="ph-bold ph-scales text-brand-cyan text-lg"></i>
+                        Ver Términos y Condiciones de la Campaña
+                    </span>
+                    <i class="ph-bold ph-caret-down text-brand-cyan transition group-open:rotate-180"></i>
+                </summary>
+                <div class="p-6 pt-0 text-xs text-gray-300 space-y-3 leading-relaxed border-t border-white/5 mt-2">
+                    <p><strong>1. Vigencia:</strong> Aplica únicamente durante el primer mes de vigencia de la campaña.</p>
+                    <p><strong>2. Evaluación de Continuidad:</strong> Al término del primer mes, la administración de Calidosas F.C. evaluará los resultados para definir su continuidad o ajuste en meses posteriores.</p>
+                    <p><strong>3. Activación del Beneficio:</strong> El descuento o mes gratis para la jugadora referente se otorgará una vez la(s) amiga(s) referida(s) cancelen formalmente su primera mensualidad.</p>
+                    <p><strong>4. Reajuste para Jugadoras Nuevas:</strong> Si una nueva integrante ingresa pagando $159.000 y en su primer mes refiere a una amiga que se inscriba y pague, su mensualidad de ese primer mes se reajusta automáticamente a $50.000.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-navy border-t border-white/10 py-8 text-center text-xs text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 space-y-3">
+            <div class="flex justify-center items-center gap-2">
+                <img src="image.jpeg" alt="Escudo" class="h-8 w-8 object-contain">
+                <span class="font-display text-xl text-white font-bold">CLUB DEPORTIVO CALIDOSAS F.C.</span>
+            </div>
+            <p>© 2026 Calidosas F.C. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT DE FUNCIONALIDAD -->
+    <script>
+        // Configuración de Servidores y Contacto
+        const whatsappAdmin = "573114677773";
+        
+        // 🚨 IMPORTANTE: PEGA AQUÍ LA URL DE TU GOOGLE APPS SCRIPT SI CREASTE LA HOJA DE EXCEL 🚨
+        const googleSheetScriptURL = ""; 
+
+        let perfilActual = 'actual'; // 'actual' | 'nueva'
+
+        // Renderizar campos de amigas según selección
+        function renderCamposAmigas() {
+            const qty = parseInt(document.getElementById('numAmigasSelect').value);
+            const container = document.getElementById('contenedorAmigas');
+            container.innerHTML = '';
+
+            for (let i = 1; i <= qty; i++) {
+                const html = `
+                    <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5 space-y-3">
+                        <span class="text-xs font-bold text-brand-gold uppercase block">Amiga Referida #${i}</span>
+                        <div class="grid sm:grid-cols-2 gap-3">
+                            <input type="text" id="amigaNombre_${i}" required placeholder="Nombre de tu amiga #${i}" 
+                                class="bg-brand-navyCard border border-white/10 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-brand-cyan">
+                            <input type="tel" id="amigaTel_${i}" required placeholder="WhatsApp de tu amiga #${i}" 
+                                class="bg-brand-navyCard border border-white/10 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-brand-cyan">
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += html;
+            }
+        }
+
+        // Alternar entre perfil actual y nueva
+        function setPerfil(perfil) {
+            perfilActual = perfil;
+            const btnActual = document.getElementById('btnPerfilActual');
+            const btnNueva = document.getElementById('btnPerfilNueva');
+
+            if (perfil === 'actual') {
+                btnActual.className = "px-5 py-2.5 rounded-lg font-bold text-sm transition bg-brand-cyan text-brand-navy shadow";
+                btnNueva.className = "px-5 py-2.5 rounded-lg font-bold text-sm transition text-gray-400 hover:text-white";
+            } else {
+                btnNueva.className = "px-5 py-2.5 rounded-lg font-bold text-sm transition bg-brand-orange text-white shadow";
+                btnActual.className = "px-5 py-2.5 rounded-lg font-bold text-sm transition text-gray-400 hover:text-white";
+            }
+            actualizarSimulador();
+        }
+
+        // Lógica de cálculo del simulador
+        function actualizarSimulador() {
+            const range = document.getElementById('rangeAmigas');
+            const val = parseInt(range.value);
+            
+            const labelAmigas = document.getElementById('labelAmigas');
+            const precioFinal = document.getElementById('precioFinal');
+            const precioTachado = document.getElementById('precioTachado');
+            const mensajeAhorro = document.getElementById('mensajeAhorro');
+            const iconoLogro = document.getElementById('iconoLogro');
+            const tituloLogro = document.getElementById('tituloLogro');
+            const descLogro = document.getElementById('descLogro');
+
+            labelAmigas.innerText = val === 3 ? "3+ Amigas" : `${val} Amiga${val !== 1 ? 's' : ''}`;
+
+            if (perfilActual === 'actual') {
+                if (val === 0) {
+                    precioFinal.innerText = "$159.000";
+                    precioTachado.classList.add('hidden');
+                    mensajeAhorro.innerText = "Tarifa normal del mes.";
+                    iconoLogro.className = "ph-fill ph-user-circle text-4xl text-gray-400";
+                    tituloLogro.innerText = "Sin Referidas";
+                    descLogro.innerText = "Invita a tu primera amiga para empezar a ahorrar.";
+                } else if (val === 1) {
+                    precioFinal.innerText = "$100.000";
+                    precioTachado.classList.remove('hidden');
+                    mensajeAhorro.innerText = "¡Ahorras $59.000 este primer mes!";
+                    iconoLogro.className = "ph-fill ph-bronze-medal text-4xl text-brand-orange";
+                    tituloLogro.innerText = "Nivel Bronce";
+                    descLogro.innerText = "¡1 Amiga inscrita y pagada!";
+                } else if (val === 2) {
+                    precioFinal.innerText = "$50.000";
+                    precioTachado.classList.remove('hidden');
+                    mensajeAhorro.innerText = "¡Ahorras $109.000 este primer mes!";
+                    iconoLogro.className = "ph-fill ph-silver-medal text-4xl text-brand-cyan";
+                    tituloLogro.innerText = "Nivel Plata";
+                    descLogro.innerText = "¡2 Amigas inscritas y pagadas!";
+                } else if (val >= 3) {
+                    precioFinal.innerText = "$0";
+                    precioTachado.classList.remove('hidden');
+                    mensajeAhorro.innerText = "¡100% GRATIS! Te regalamos el mes completo.";
+                    iconoLogro.className = "ph-fill ph-trophy text-4xl text-brand-gold";
+                    tituloLogro.innerText = "¡Nivel Oro - MES GRATIS!";
+                    descLogro.innerText = "¡3 o más amigas inscritas!";
+                }
+            } else {
+                // Perfil jugadora nueva
+                if (val === 0) {
+                    precioFinal.innerText = "$159.000";
+                    precioTachado.classList.add('hidden');
+                    mensajeAhorro.innerText = "Matrícula normal de ingreso.";
+                    iconoLogro.className = "ph-fill ph-user-plus text-4xl text-brand-cyan";
+                    tituloLogro.innerText = "Nueva Jugadora";
+                    descLogro.innerText = "Si traes 1 amiga este mes, reajustamos tu tarifa.";
+                } else {
+                    precioFinal.innerText = "$50.000";
+                    precioTachado.classList.remove('hidden');
+                    mensajeAhorro.innerText = "¡Reajuste especial por traer tu amiga!";
+                    iconoLogro.className = "ph-fill ph-sparkle text-4xl text-brand-gold";
+                    tituloLogro.innerText = "Beneficio Nueva Jugadora";
+                    descLogro.innerText = "Tu primer mes baja de $159.000 a solo $50.000.";
+                }
+            }
+        }
+
+        // Envío y almacenamiento de datos
+        async function procesarRegistro(e) {
+            e.preventDefault();
+
+            const btnSubmit = document.getElementById('btnSubmit');
+            const statusMessage = document.getElementById('statusMessage');
+
+            const nombre = document.getElementById('nombreJugadora').value.trim();
+            const telefono = document.getElementById('telefonoJugadora').value.trim();
+            const qty = parseInt(document.getElementById('numAmigasSelect').value);
+
+            let listaAmigas = [];
+            let textoAmigasWhatsApp = "";
+
+            for (let i = 1; i <= qty; i++) {
+                const nomAmiga = document.getElementById(`amigaNombre_${i}`).value.trim();
+                const telAmiga = document.getElementById(`amigaTel_${i}`).value.trim();
+                listaAmigas.push(`${nomAmiga} (${telAmiga})`);
+                textoAmigasWhatsApp += `%0A  • ${nomAmiga} - ${telAmiga}`;
+            }
+
+            const payload = {
+                nombre: nombre,
+                telefono: telefono,
+                tipoJugadora: perfilActual === 'actual' ? 'Jugadora Actual' : 'Jugadora Nueva',
+                cantidadAmigas: qty,
+                amigas: listaAmigas.join(" | "),
+                beneficio: qty === 1 ? "$100.000" : (qty === 2 ? "$50.000" : "$0 - GRATIS")
+            };
+
+            btnSubmit.disabled = true;
+            btnSubmit.innerHTML = `<i class="ph-bold ph-spinner animate-spin text-xl"></i> Guardando registro...`;
+
+            // Enviar a Google Sheets si la URL está configurada
+            if (googleSheetScriptURL !== "") {
+                try {
+                    await fetch(googleSheetScriptURL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                } catch (error) {
+                    console.log("Aviso: Registro procesado por WhatsApp");
+                }
+            }
+
+            // Armar mensaje directo para WhatsApp
+            const mensajeWhatsApp = `⚽ *REGISTRO DE REFERIDAS - CALIDOSAS F.C.*%0A%0A` +
+                `👤 *Jugadora:* ${nombre}%0A` +
+                `📞 *WhatsApp:* ${telefono}%0A` +
+                `📌 *Tipo:* ${payload.tipoJugadora}%0A` +
+                `👯‍♀️ *Amigas a Referir (${qty}):*${textoAmigasWhatsApp}%0A%0A` +
+                `💰 *Beneficio Proyectado:* ${payload.beneficio}%0A%0A` +
+                `Hola, acabo de registrar a mis amigas en la página web. ¡Quedo atenta para activar mi beneficio!`;
+
+            statusMessage.className = "p-4 rounded-xl text-center text-xs font-bold bg-green-500/20 text-green-300 border border-green-500/30";
+            statusMessage.innerText = "¡Registro completado! Abriendo WhatsApp de Calidosas F.C...";
+            statusMessage.classList.remove('hidden');
+
+            setTimeout(() => {
+                window.open(`https://wa.me/${whatsappAdmin}?text=${mensajeWhatsApp}`, '_blank');
+                btnSubmit.disabled = false;
+                btnSubmit.innerHTML = `<i class="ph-bold ph-paper-plane-tilt text-xl"></i> REGISTRAR REFERIDAS Y NOTIFICAR POR WHATSAPP`;
+            }, 1200);
+        }
+
+        // Inicializar componentes al cargar
+        window.onload = function() {
+            renderCamposAmigas();
+            actualizarSimulador();
+        };
+    </script>
+</body>
+</html>
